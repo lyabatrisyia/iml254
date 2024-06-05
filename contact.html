@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Personal Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+<style>
+.contact-container{
+    align-items: center;
+}
+.contact-left-title h4{
+    font-weight: 100;
+    font-size: 30px;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+
+}
+
+.contact-inputs{
+    margin-left: 35%;
+    width: 400px;
+    height: 50px;
+    font-weight: 500px;
+    padding: 20px;
+}
+
+button{
+    margin-left: 49%;
+    color: #000000;
+
+}
+
+.contact-inputs:placeholder{
+    color:#000000;
+}
+
+@media (max-width:800px){
+    .contact-inputs{
+        width: 80vw;
+    }
+    .contact-right{
+        display: none;
+    }
+}
+</style>
+
+<!--INDEX-->
+<header>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li><a href="#">ABOUT ME</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="background.html">BACKGROUND</a></li>
+                    <li><a href="family.html">FAMILY</a></li>
+                    <li><a href="friends.html">FRIENDS</a></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="hometown.html">HOMETOWN</a></li>
+            <li><a href="project.html">PROJECT</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="contact-left-title">
+                <h4>Let's Talk</h4>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="36d65cd8-eada-4acc-a178-5a0764291f0c"><br><br>
+            <input type="text" name="Name" placeholder="Your Name" class="contact-inputs" required><br><br>
+            <input type="text" name="Email" placeholder="Your Email" class="contact-inputs" required><br><br>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>          
+    </div>
+</header>

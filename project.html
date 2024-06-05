@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Personal Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+
+<style>
+
+/*--artwork--*/
+
+.artworks p{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.artworks a img{
+    width: 200px;
+    height: auto;
+    margin: 30px;
+    border-radius: 10%;
+}
+
+.animations{
+    text-align: center;
+}
+.animations p{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin: 3%;
+    text-decoration: underline;
+}
+.animations button{
+    text-decoration:none;
+    padding: 10px;
+    background-color: #a4a1a1;
+    margin: 10px;
+    border-radius: 10%;
+    size: 50%;
+}
+.footer p{
+    margin: 5% 0;
+    color: #000000;
+    text-align: center;
+}
+
+</style>
+
+<!--INDEX-->
+<header>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li><a href="#">ABOUT ME</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="background.html">BACKGROUND</a></li>
+                    <li><a href="family.html">FAMILY</a></li>
+                    <li><a href="friends.html">FRIENDS</a></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="hometown.html">HOMETOWN</a></li>
+            <li><a href="project.html">PROJECT</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+<h1 class="heading">MY PROJECTS</h1><br>
+<div class="artworks" style="text-align: center;"><br>
+    <p>ARTWORKS</p><br>
+    <p style="text-decoration: none;">You can follow me on instagram to see my sketch <a href="https://www.instagram.com/batsyy.art_/">@batsy.art</a></p>
+    <a target="_blank" href="image/artwork2.jpg">
+        <img src="image/artwork2.jpg">
+    </a>
+    <a target="_blank" href="image/artwork3.jpg">
+        <img src="image/artwork3.jpg">
+    </a>
+    <a target="_blank" href="image/artwork7.jpg">
+        <img src="image/artwork7.jpg">
+    </a>
+    <a target="_blank" href="image/artwork4.jpg">
+        <img src="image/artwork4.jpg">
+    </a>
+</div>
+</header>
+
+<section>
+    <div class="animations" style="background: url(image/backgound.jpg);" style="text-align: center;"><br>
+        <p>ANIMATIONS</p>
+            <video id="video1" width="420">
+                <source src="vid/animations1.mp4" type="video/mp4">
+            </video>
+            <br>
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="makeBig()">Big</button>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeNormal()">Normal</button>
+    </div>
+    <footer class="footer">
+        <p>Copyright &copy;2024 Nur Alya Batrisyia. All right reserved.</p>
+        <a class="gotop" href="#"><i class="fa-solid fa-up-long"></i></a>
+    </footer>
+</section>
+
+<script>
+    var myVideo= document.getElementById("video1");
+    function playPause() {
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+    
+    function makeBig() {
+        myVideo.width = 560;
+    }
+    
+    function makeSmall(){
+        myVideo.width = 320
+    }
+    
+    function makeNormal() {
+        myVideo.width = 420;
+    }
+    </script>
+</html>

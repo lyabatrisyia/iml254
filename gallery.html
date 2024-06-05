@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Personal Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+<style>
+
+.gallery a img{
+    width: 200px;
+    height: auto;
+    margin: 5% 10px;
+    border-radius: 10%;
+}
+
+.moments{
+    text-align: center;
+    background: url(image/background2.jpg);
+}
+
+.moments p{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.moments button{
+    text-decoration:none;
+    padding: 10px;
+    background-color: #a4a1a1;
+    margin: 10px;
+    border-radius: 10%;
+    size: 50%;
+}
+
+.footer p{
+    text-align: center;
+    text-decoration: none;
+    font-size: small;
+}
+</style>
+
+<!--INDEX-->
+<header>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li><a href="#">ABOUT ME</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="background.html">BACKGROUND</a></li>
+                    <li><a href="family.html">FAMILY</a></li>
+                    <li><a href="friends.html">FRIENDS</a></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="hometown.html">HOMETOWN</a></li>
+            <li><a href="project.html">PROJECT</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+    <div id="div1" class="heading">GALLERY</div>
+
+<div class="gallery" style="text-align: center;">
+    <br>
+    <a target="_blank" href="image/me6.jpg">
+        <img src="imaeg/me6.jpg">
+    </a>
+    <a target="_blank" href="image/me9.jpg">
+        <img src="image/me9.jpg">
+    </a>
+    <a target="_blank" href="image/me10.jpg">
+        <img src="image/me10.jpg">
+    </a>
+    <a target="_blank" href="image/me12.jpg">
+        <img src="image/me12.jpg">
+    </a>
+    <a target="_blank" href="image/me5.jpg">
+        <img src="image/me5.jpg">
+    </a>
+</div>
+</header>
+
+<section>
+    <div class="moments" style="text-align: center;">
+        <br>
+        <p>MOMENT</p>
+        <br>
+        <video id="video1" width="420">
+                <source src="vid/myhbvid.mp4" type="video/mp4">
+        </video>
+            <br>
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="makeBig()">Big</button>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeNormal()">Normal</button>
+            <br>
+            <footer class="footer">
+                <p>Copyright &copy;2024 Nur Alya Batrisyia. All right reserved.</p>
+            </footer>
+</section>
+<script>
+    var myVideo= document.getElementById("video1");
+    function playPause() {
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+    
+    function makeBig() {
+        myVideo.width = 560;
+    }
+    
+    function makeSmall(){
+        myVideo.width = 320
+    }
+    
+    function makeNormal() {
+        myVideo.width = 420;
+    }
+    </script>
+
+</html>
